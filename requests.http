@@ -1,0 +1,32 @@
+### API status
+GET http://127.0.0.1:8000/
+
+### Add income
+POST http://127.0.0.1:8000/transactions/
+Content-Type: application/json
+
+{
+  "amount": 1500.00,
+  "type": "income",
+  "category": "Salary"
+}
+
+### Add expense
+POST http://127.0.0.1:8000/transactions/
+Content-Type: application/json
+
+{
+  "amount": 45.90,
+  "type": "expense",
+  "category": "Food"
+}
+
+### Get all transactions
+GET http://127.0.0.1:8000/transactions/
+
+### Filter by type and date
+GET http://127.0.0.1:8000/transactions/?type=expense&start_date=2026-09-01&end_date=2026-09-30
+
+### Budget summary
+GET http://127.0.0.1:8000/budget/summary
+
